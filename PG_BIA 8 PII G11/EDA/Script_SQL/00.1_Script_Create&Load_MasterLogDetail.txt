@@ -1,0 +1,67 @@
+
+#
+# Script para criação da tabela Master_Log_Detail e load dos dados por slots
+#
+
+DROP TABLE IF EXISTS `Master_Log_detail`;
+CREATE TABLE `Master_Log_Detail` (
+  `ID` bigint(20) DEFAULT NULL,
+  `IP` varchar(9) DEFAULT NULL,
+  `USERNAME` varchar(9) DEFAULT NULL,
+  `TYPEOFREQUEST` varchar(11) DEFAULT NULL,
+  `REQUEST_DATE` varchar(17) DEFAULT NULL,
+  `RESPONSE_DATE` varchar(17) DEFAULT NULL,
+  `REQUEST_SERVICE` varchar(17) DEFAULT NULL,
+  `REQUEST_DESC` text,
+  `VOA_VERSION` varchar(22) DEFAULT NULL,
+  `TICKET` varchar(108) DEFAULT NULL,
+  `RESPONSE_DESC` text,
+  `VRSION` varchar(22) DEFAULT NULL,
+  `IS_RT` int(11) DEFAULT NULL,
+  `SERVER_ID` int(11) DEFAULT NULL,
+  KEY `log_id_idx` (`ID`),
+  KEY `log_request_date_idx` (`REQUEST_DATE`),
+  KEY `log_req_service_idx` (`REQUEST_SERVICE`),
+  KEY `log_ticket_idx` (`TICKET`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 0 and id < 95000000; 
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 95000000 and id < 96000000; 
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 96000000 and id < 97000000; 
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 97000000 and id < 98000000; 
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 98000000 and id < 99000000; 
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 99000000 and id < 100000000;
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 100000000 and id < 105000000;
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 105000000 and id < 106000000;
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 106000000 and id < 107000000;
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 107000000 and id < 108000000;
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 108000000 and id < 109000000;
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 109000000 and id < 110000000;
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 110000000 and id < 111000000;
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 111000000 and id < 112000000;
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 112000000 and id < 113000000;
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 113000000 and id < 114000000;
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 114000000 and id < 115000000;
+INSERT Master_Log_Detail select * from opt.log USE INDEX (log_id_idx) where id >= 115000000 and id < 117000000;
+
+
+-- min: 41 399 108 || max: 116 556 609
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 0 and id < 95000000; -- 1 482 808
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 95000000 and id < 96000000; -- 999 907
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 96000000 and id < 97000000; -- 999 751
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 97000000 and id < 98000000; -- 999 913
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 98000000 and id < 99000000; -- 999 661
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 99000000 and id < 100000000; -- 564 405
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 100000000 and id < 105000000; -- 1 362 868
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 105000000 and id < 106000000; -- 999 843
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 106000000 and id < 107000000; -- 999 818
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 107000000 and id < 108000000; -- 999 557
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 108000000 and id < 109000000; -- 999 914
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 109000000 and id < 110000000; -- 999 748
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 110000000 and id < 111000000; -- 999 350
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 111000000 and id < 112000000; -- 999 154
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 112000000 and id < 113000000; -- 999 178
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 113000000 and id < 114000000; -- 999 080
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 114000000 and id < 115000000; -- 999 790
+select count(*) from opt.log USE INDEX (log_id_idx) where id >= 115000000 and id < 117000000; -- 1 556 246

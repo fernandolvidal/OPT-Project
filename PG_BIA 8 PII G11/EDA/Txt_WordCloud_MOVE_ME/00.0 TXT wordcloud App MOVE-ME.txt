@@ -1,0 +1,22 @@
+MOVE-ME.AMP
+Os transportes todos ligados
+O MOVE-ME.AMP é uma ferramenta que permite ao utilizador comodamente em sua casa, ou em qualquer espaço público, e através do seu smartphone, computador ou tablet,planear a sua viagem de lazer ou de trabalho no território da área metropolitana do Porto. Com recurso à informação planeada e em tempo real disponibilizada pelos operadores de transportes públicos, o MOVE-ME.AMP permite ao utilizador saber, antes de iniciar a sua viagem, a hora a que chegará ao seu destino e os transportes que deve utilizar. Completamente inovador em Portugal, o MOVE-ME.AMP disponibiliza ao utilizador um conjunto detalhado de informações proveniente de diferentes operadores de transporte público, permitindo planear rotas intermodais em toda a área metropolitana do Porto. O sistema MOVE-ME.AMP, além do site da AMP, está disponível para ambiente Android e iPhone (iOS) e pode ser descarregado diretamente nas lojas on-line.
+
+Vantagens
+Ao utilizar o MOVE-ME.AMP os utilizadores beneficiam de informações actualizadas sobre as próximas partidas a partir do local onde se encontram (ou através de outra localização que indiquem), tempos de espera associados, assim como informação sobre a localização das paragens e principais pontos de interesse que estão ao seu alcance. A aplicação permite igualmente, e em tempo real, sempre que este estiver disponível, construir rotas e planear viagens através da descrição de pontos de passagem definidos pelo utilizador e que, interligados, originam uma rota à sua escolha.
+
+Como Utilizar
+O MOVE-ME.AMP permite pesquisar por próximas partidas e consultar tempos de espera e os destinos associados às próximas viaturas a passar num determinado local, indicado pelo utilizador. Para a pesquisa das Próximas Partidas o sistema permite selecionar as paragens através de toques num mapa interactivo, ou escrevendo o código ou parte do nome da paragem, ou ainda escolhendo o operador e as linhas respetivas. O sistema memoriza as paragens recentemente usadas de forma a sugerir o que está mais ligado ao utilizador. Permite consultar Paragens, através da indicação da sua localização no mapa ou definindo-a textualmente, identificando quais as paragens que se encontram mais próximas da sua posição e quais as próximas viagens e os respectivos destinos. E pesquisa igualmente por Pontos de Interesse, possibilitando a consulta dos pontos de interesse mais próximos, seleccionando um raio de pesquisa, e, desta forma, obter um percurso e informações sobre as viagens cujo destino é o respetivo ponto de interesse escolhido. O MOVE-ME.AMP possibilita adicionalmente a opção de Cálculo de Rota, onde o utilizador pode calcular uma rota que interligue vários pontos por si definidos. Estes pontos podem ser paragens, pontos de interesse, ou posições GPS selecionadas. Os resultados devolvidos têm em consideração a posição real das viaturas o que permite dar a informação do melhor percurso num dado momento. O sistema informa a hora de passagem em cada uma das paragens, bem como os locais de transbordo e percursos a pé entre eles. As rotas ficam disponíveis em histórico para serem reutilizadas posteriormente.
+
+Como Ter Acesso
+O sistema MOVE-ME.AMP está disponível para ambiente Android e iPhone e pode ser descarregado directamente nas lojas on-line ou através do endereço www.move-me.mobi. Caso não disponha de tecnologia Android ou iOS, qualquer utilizador pode aceder ao serviço e beneficiar de todas as suas vantagens, através de uma versão disponível para website, no mesmo endereço.
+
+MOVE-ME.AMP é um protótipo de um aplicativo que permite o acesso móvel a informações globais e diversificadas sobre transportes públicos disponíveis na cidade do Porto.
+Inovador em Portugal, o MOVE-ME.AMP compartilha amplamente com o usuário final informações sobre diversos operadores de transportes públicos e permite planejar nossas rotas em tempo real com recursos como intermodalidade e tempo real.
+
+
+
+
+
+
+

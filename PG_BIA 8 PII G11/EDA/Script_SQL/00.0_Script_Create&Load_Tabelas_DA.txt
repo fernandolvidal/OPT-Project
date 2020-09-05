@@ -1,0 +1,60 @@
+
+#
+# Script para criação das tabelas
+#	. DA_log_sample » para ter um sample dos dados da opt.log
+# 	. DA_rede_full  » para ter os dados da tabela opt.rede
+# Regras para carregamento dos dados:
+# 	. DA_log_sample » load dos 250.000 registos mais recentes
+#	. DA_rede_full » load de todos os dados 
+#
+
+DROP TABLE IF EXISTS `DA_log_sample`;
+CREATE TABLE `DA_log_sample` (
+  `ID` bigint(20) DEFAULT NULL,
+  `IP` varchar(9) DEFAULT NULL,
+  `USERNAME` varchar(9) DEFAULT NULL,
+  `TYPEOFREQUEST` varchar(11) DEFAULT NULL,
+  `REQUEST_DATE` varchar(17) DEFAULT NULL,
+  `RESPONSE_DATE` varchar(17) DEFAULT NULL,
+  `REQUEST_SERVICE` varchar(17) DEFAULT NULL,
+  `REQUEST_DESC` text,
+  `VOA_VERSION` varchar(22) DEFAULT NULL,
+  `TICKET` varchar(108) DEFAULT NULL,
+  `RESPONSE_DESC` text,
+  `VRSION` varchar(22) DEFAULT NULL,
+  `IS_RT` int(11) DEFAULT NULL,
+  `SERVER_ID` int(11) DEFAULT NULL,
+  KEY `log_id_idx` (`ID`),
+  KEY `log_request_date_idx` (`REQUEST_DATE`),
+  KEY `log_req_service_idx` (`REQUEST_SERVICE`),
+  KEY `log_ticket_idx` (`TICKET`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `DA_rede_full`;
+CREATE TABLE `DA_rede_full` (
+  `PROVIDER_ID` bigint(20) DEFAULT NULL,
+  `PROVIDER_NAME` varchar(4) DEFAULT NULL,
+  `LINE_ID` bigint(20) DEFAULT NULL,
+  `LINE_CODE` varchar(8) DEFAULT NULL,
+  `LINE_GO_NAME` varchar(40) DEFAULT NULL,
+  `LINE_RETURN_NAME` varchar(41) DEFAULT NULL,
+  `PATH_ID` bigint(20) DEFAULT NULL,
+  `ORIENTATION` char(1) DEFAULT NULL,
+  `PATH_CODE` varchar(12) DEFAULT NULL,
+  `PATHSTOP_ID` bigint(20) DEFAULT NULL,
+  `PATHSTOP_STOPORDER` bigint(20) DEFAULT NULL,
+  `PATHSTOP_PREVDISTANCE` bigint(20) DEFAULT NULL,
+  `STOP_CODE` varchar(11) DEFAULT NULL,
+  `STOP_SHORTNAME` varchar(32) DEFAULT NULL,
+  `STOP_NAME` varchar(32) DEFAULT NULL,
+  `STOP_LATITUDE` decimal(20,10) DEFAULT NULL,
+  `STOP_LONGITUDE` decimal(20,10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT DA_log_sample SELECT * FROM opt.log order by REQUEST_DATE desc limit 250000;
+INSERT DA_rede_full SELECT * FROM opt.rede;
+
+select count(*) from DA_rede_full;
+select count(*) from DA_log_sample;
+
+

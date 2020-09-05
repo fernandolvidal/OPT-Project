@@ -1,0 +1,24 @@
+------------------------------------------------------------------
+-- 2019-11-29 Tabela LOG e REDE disponiveis na sua versão final --
+------------------------------------------------------------------
+
+ALTER TABLE log_detail DROP COLUMN IP;	 		## campo não relevante
+ALTER TABLE log_detail DROP COLUMN VRSION;		## campo não relevante
+ALTER TABLE log_detail DROP COLUMN SERVER_ID;	## campo não relevante
+ALTER TABLE log_detail DROP COLUMN VOA_VERSION;	## campo não relevante
+ALTER TABLE log_detail DROP COLUMN IS_RT;		## campo não relevante
+
+## ------------- USERNAME ------------
+DELETE FROM log_detail WHERE username = 'Infoboard'; 	## inforboard não faz parte do MOVE-ME 	| delete de 69716 registos dos 500.000 
+DELETE FROM log_detail WHERE username = 'Website'; 		## website não faz parte do MOVE-ME 	| delete de 107 registos dos 500.000 
+DELETE FROM log_detail WHERE username = 'localhost';	## localhost não faz parte do MOVE-ME 	| delete de 6 registos dos 500.000 
+## username »» Android; IOS; WinPhone; iPhone »» necessário confirmar o significado de CheckSyst e SystemChe
+select distinct (username) from log_detail; 
+
+## ------------- TYPEOFREQUEST -------------
+select distinct (TYPEOFREQUEST) from log_detail; 
+## se campo TYPEOFREQUEST = null então coloca "Not Defined"
+select count(*) from log_detail WHERE TYPEOFREQUEST=''; ## nº registos = 179493
+UPDATE log_detail SET TYPEOFREQUEST='Not Defined' WHERE TYPEOFREQUEST='';
+
+## NECESSÁRIO ESCLARECER OUTROS CAMPOS COM DETALHE

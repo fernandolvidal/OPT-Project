@@ -1,0 +1,1 @@
+Utilizamos processo manual de copy paste das reviews e tratamento no excel por não se conseguir extrair a totalidade das issues por intermédio da API ou webscrapping.
